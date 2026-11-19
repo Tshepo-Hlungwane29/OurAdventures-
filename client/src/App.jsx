@@ -3,9 +3,9 @@ import './App.css';
 import DateWheel from './DateWheel';
 import PhotoUpload from './PhotoUpload';
 
-const API_URL = 'http://localhost:5000/api/adventures';
-const MEMORY_API = 'http://localhost:5000/api/memories';
-const LOVE_NOTE_API = 'http://localhost:5000/api/love-notes';
+const API_URL = 'https://ouradventures.onrender.com/api/adventures';
+const MEMORY_API = 'https://ouradventures.onrender.com/api/memories';
+const LOVE_NOTE_API = 'https://ouradventures.onrender.com/api/love-notes';
 
 function App() {
   const [selectedActivity, setSelectedActivity] = useState(null);
