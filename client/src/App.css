@@ -1,242 +1,4 @@
-#root {
-  width: 100%;
-  min-height: 100vh;
-}
 
-.website {
-  min-height: 100vh;
-  width: 100%;
-  background-image:
-    linear-gradient(
-      rgba(25, 38, 29, 0.40),
-      rgba(25, 38, 29, 0.55)
-    ),
-    url('/images/couple-background.jpeg');
-  background-size: cover;
-  background-position: center 55%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-.overlay {
-  min-height: 100vh;
-  backdrop-filter: blur(4px);
-  color: #fff9eb;
-  display: flex;
-  flex-direction: column;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px 7%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.navbar h2 {
-  font-size: 25px;
-  font-weight: normal;
-}
-
-.navbar span {
-  letter-spacing: 2px;
-}
-
-/* NAVIGATION MENU */
-
-.navigation-menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-}
-
-.navigation-menu a {
-  color: #fff9eb;
-  text-decoration: none;
-  font-size: 15px;
-  transition: color 0.3s ease;
-}
-
-.navigation-menu a:hover {
-  color: #d4b77e;
-}
-
-/* MOBILE NAVIGATION */
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 18px;
-    text-align: center;
-  }
-
-  .navigation-menu {
-    gap: 15px;
-  }
-
-  .navigation-menu a {
-    font-size: 14px;
-  }
-}
-
-.hero {
-  flex: 1;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 65px 20px;
-}
-
-.eyebrow {
-  letter-spacing: 5px;
-  color: #e8d5a9;
-  font-size: 12px;
-  margin-bottom: 20px;
-}
-
-.hero h1 {
-  font-size: clamp(38px, 6vw, 68px);
-  font-weight: normal;
-  line-height: 1.25;
-  margin-bottom: 20px;
-}
-
-.subtitle {
-  font-size: 17px;
-  line-height: 1.9;
-  color: #f2eadb;
-}
-
-.countdown {
-  margin: 35px 0 25px;
-  padding: 25px 55px;
-  background: rgba(255, 255, 255, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 18px;
-  backdrop-filter: blur(12px);
-}
-
-.countdown span {
-  font-size: 11px;
-  letter-spacing: 3px;
-}
-
-.countdown h2 {
-  font-size: 42px;
-  margin: 12px 0;
-  color: #e8d5a9;
-}
-
-.countdown p {
-  font-size: 13px;
-}
-
-.spin-button {
-  background: #c6a96b;
-  color: #263b2c;
-  border: none;
-  padding: 19px 42px;
-  border-radius: 40px;
-  font-size: 14px;
-  letter-spacing: 2px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.spin-button:hover {
-  background: #f0dfb8;
-  transform: scale(1.05);
-}
-
-.bottom-text {
-  margin-top: 35px;
-  font-size: 13px;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  gap: 45px;
-  padding: 25px;
-  background: rgba(20, 35, 25, 0.65);
-  font-size: 13px;
-}
-
-/* SPINNING WHEEL */
-
-.wheel-section {
-  padding: 80px 20px;
-  text-align: center;
-  background: rgba(245, 235, 216, 0.94);
-  color: #354735;
-}
-
-.wheel-eyebrow {
-  letter-spacing: 5px;
-  color: #9b8151;
-  font-size: 12px;
-  margin-bottom: 15px;
-}
-
-.wheel-section h2 {
-  font-size: clamp(26px, 4vw, 40px);
-  font-weight: normal;
-  margin-bottom: 15px;
-}
-
-.wheel-description {
-  margin-bottom: 40px;
-  color: #65745e;
-}
-
-.wheel-container {
-  position: relative;
-  width: 400px;
-  max-width: 85vw;
-  aspect-ratio: 1 / 1;
-  margin: 0 auto 35px;
-  flex-shrink: 0;
-}
-
-.wheel-svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 5px solid #b99a5c;
-  box-shadow: 0 12px 35px rgba(40, 50, 35, 0.2);
-}
-
-.wheel-pointer {
-  position: absolute;
-  top: -17px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #8b6038;
-  font-size: 35px;
-  z-index: 2;
-}
-
-.wheel-spin-button {
-  margin-bottom: 30px;
-}
-
-.wheel-spin-button:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-
-.result-card {
-  max-width: 480px;
-  margin: 20px auto;
-  padding: 30px;
-  border-radius: 18px;
-  background: #fffaf0;
   border: 1px solid #d5c49a;
   box-shadow: 0 8px 25px rgba(40, 50, 35, 0.12);
 }
@@ -370,21 +132,38 @@ footer {
 /* DESKTOP AND MOBILE RESPONSIVENESS */
 
 @media (max-width: 600px) {
- .website {
-    background-attachment: scroll;
+
+  /* MOBILE BACKGROUND */
+
+  .website {
+    position: relative;
+    isolation: isolate;
+    background: none;
+  }
+
+  .website::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image:
+      linear-gradient(
+        rgba(25, 38, 29, 0.20),
+        rgba(25, 38, 29, 0.30)
+      ),
+      url('/images/couple-background.jpeg');
+
     background-size: cover;
     background-position: center 55%;
-    background-image:
-        linear-gradient(
-            rgba(25, 38, 29, 0.15),
-            rgba(25, 38, 29, 0.25)
-        ),
-        url('/images/couple-background.jpeg');
- }
-.overlay {
+    background-repeat: no-repeat;
+  }
+
+  .overlay {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-}
+  }
 
   .navbar {
     flex-direction: column;
