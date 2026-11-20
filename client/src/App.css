@@ -1,6 +1,7 @@
-
-  border: 1px solid #d5c49a;
-  box-shadow: 0 8px 25px rgba(40, 50, 35, 0.12);
+.result-card > p:first-child {
+  letter-spacing: 3px;
+  font-size: 12px;
+  color: #9b8151;
 }
 
 .result-card > p:first-child {
