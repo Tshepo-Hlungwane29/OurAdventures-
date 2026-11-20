@@ -370,9 +370,21 @@ footer {
 /* DESKTOP AND MOBILE RESPONSIVENESS */
 
 @media (max-width: 600px) {
-  .website {
+ .website {
     background-attachment: scroll;
-  }
+    background-size: cover;
+    background-position: center 55%;
+    background-image:
+        linear-gradient(
+            rgba(25, 38, 29, 0.15),
+            rgba(25, 38, 29, 0.25)
+        ),
+        url('/images/couple-background.jpeg');
+}
+.overlay {
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+}
 
   .navbar {
     flex-direction: column;
